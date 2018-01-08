@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+  <!--not provide yet-->
+    <widget>
+        <name>Twitter</name>
+        <description>Simple tweet and comments widgets</description>
+        <key type="oauth_access_token">861869260687134720-Cdau20ZOqZhA5H2EgNJQJDfFsgDC2Wn</key>
+        <key type="oauth_access_token_secret">lR1qFH7iCZZXzgmXaRwzgqNepOUPrT4xkgN2T5AAuDXHo</key>
+        <key type="consumer_key">KEKrtXhYPIrBvsuY4mKrN6tzp</key>
+        <key type="consumer_secret">eSq1ML3BLGXZ9id2uws8brqwvZ71oKUUPp6fl0WMmzQ3koKqGI</key>
+    </widget>
+    <widget>
+        <name>Flickr</name>
+        <description>A simple photo widgets</description>
+        <key type="secret">cd46755bc3c580902d32fd602e875fd0</key>
+    </widget>
+    <widget>
+        <name>Google Map</name>
+        <description>To show wine locations on weather map api</description>
+        <key>AIzaSyBfoyNzViB4MOd9BpKujfD75lEMx-v5xLU</key>
+    </widget>
+    <database>
+        <server>localhost</server>
+        <password></password>
+        <user>root</user>
+        <name>myDB</name>
+        <table name="wine">
+            <key_field type="varchar" length="45">id</key_field>
+            <field type="varchar" length="90">name</field>
+            <field type="varchar" length="45">type</field>
+            <field type="varchar" length="45">alcohol</field>
+            <field type="longtext">description</field>
+            <field type="varchar" length="45">colour_intensity</field>
+            <field type="double">price</field>
+            <field type="varchar" length="45">supplier</field>
+            <field type="varchar" length="255">image</field>
+            <field type="varchar" length="45">lbl</field>
+        </table>
+        <table name="region">
+            <key_field type="varchar" length="45">woeid</key_field>
+            <field type="varchar" length="45">name</field>
+            <field type="varchar" length="45">languages</field>
+            <field type="longtext">description</field>
+            <field type="int" length="20">population</field>
+            <field type="double">longitude</field>
+            <field type="double">latitude</field>
+        </table>
+        <table name="region_has_wine">
+            <key_field type="varchar" length="45">region_woeid</key_field>
+            <key_field type="varchar" length="45">wine_id</key_field>
+            <field type="double">lng</field>
+            <field type="double">lat</field>
+        </table>
+        <table name="wine_type">
+            <key_field type="varchar" length="11">type_no</key_field>
+            <field type="varchar" length="20">type_name</field>
+            <field type="longtext">description</field>
+        </table>
+    </database>
+</configurations>
